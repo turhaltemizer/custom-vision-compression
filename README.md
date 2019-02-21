@@ -28,7 +28,70 @@ You need to create your own [Custom Vision](https://www.customvision.ai) Model i
 To reproduce this experiment on your own dataset, you need to do the following steps:
 1. Mark up your dataset. To make this step easier, we've used [VoTT](https://github.com/Microsoft/VoTT) tool. 
 2. Create your own [Custom Vision](https://www.customvision.ai) account and [export compact models](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model).
-3. Move your dataset to the **data** folder. 
+3. Move your dataset to the **data** folder (don't forget about the **.json** file containing VoTT meta information). 
 4. Put all the exported models into **models/coreml** and **models/tflite** folders respectively.
 
 ## Results
+
+
+<table>
+<tr><th> Online Custom Vision Predictions </th><th> Original CoreML Predictions (43Mb) </th><th> Original TFLite Predictions (43Mb) </th></tr>
+<tr><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td></tr>
+
+<tr><th>  </th><th> CoreML 16FP Predictions (22Mb) </th><th> TFLite 8FP Prediction (11Mb)  </th></tr>
+<tr><td>
+
+
+</td><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td></tr>
+
+<tr><th>  </th><th> CoreML 8FP Predictions (11Mb) </th><th>  </th></tr>
+<tr><td>
+
+
+</td><td>
+
+| Tag | Precision | Recall|
+|--|--|--|
+|cat| | |
+|dog| | |
+
+</td><td>
+
+
+</td></tr>
+</table>
