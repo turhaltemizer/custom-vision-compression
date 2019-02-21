@@ -32,7 +32,12 @@ To reproduce this experiment on your own dataset, you need to do the following s
 4. Put all the exported models into **models/coreml** and **models/tflite** folders respectively.
 
 ## Results
-
+Taking everything into consideration, we can come up with the following conclusion: 
+* Compression of the mentioned model is possible with an insignificant loss of accuracy. 
+* In case of CoreML (iOS platform), we have the following options: 16FP format (22Mb) and 8FP format (11Mb). The second one is better in terms of the expected size, however it slightly inferiors in quality. 
+* As for the TFLite model (Android platform), the only possible option is to quantize the model to 8FP format (11Mb). 
+* Custom Vision API works a bit better than all the exported models. 
+   
 
 <table>
 <tr><th> Online Custom Vision Predictions </th><th> Original CoreML Predictions (43Mb) </th><th> Original TFLite Predictions (43Mb) </th></tr>
