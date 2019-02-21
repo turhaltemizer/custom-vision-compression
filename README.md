@@ -1,5 +1,8 @@
 # Compress a model exported from Custom Vision Service
 
+Sometimes you might face such business cases when you need to use a Machine Learning model on a mobile device. However, there is a possibility to rest against restrictions on the size of the model to be placed on a device. 
+[Microsoft Custom Vision Service](https://www.customvision.ai) allows you to easily customize your own state-of-the-art computer vision models for your unique use case. And this repository will guide you through the ways of Custom Vision exported models compression. 
+
 ## Installation
 1. Clone this repository.
 ```bash
@@ -33,10 +36,10 @@ To reproduce this experiment on your own dataset, you need to do the following s
 
 ## Results
 Taking everything into consideration, we can come up with the following conclusion: 
-* Compression of the mentioned model is possible with an insignificant loss of accuracy. 
-* In case of CoreML (iOS platform), we have the following options: 16FP format (22Mb) and 8FP format (11Mb). The second one is better in terms of the expected size, however it slightly inferiors in quality. 
-* As for the TFLite model (Android platform), the only possible option is to quantize the model to 8FP format (11Mb). 
-* Custom Vision API works a bit better than all the exported models. 
+* Compression of the mentioned model is **possible** with an insignificant loss of accuracy. 
+* In case of **CoreML** (iOS platform), we have the following options: **16FP format (22Mb)** and **8FP format (11Mb)**. The second one is better in terms of the expected size, however it slightly inferiors in quality. 
+* As for the **TFLite model** (Android platform), the only possible option is to quantize the model to **8FP format (11Mb)**. 
+* **Custom Vision API** works a bit better than all the exported models. 
    
 
 <table>
