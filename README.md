@@ -1,6 +1,6 @@
 # Compress a model exported from Custom Vision Service
 
-Sometimes you might face such business cases when you need to use a Machine Learning model on a mobile device. However, there is a possibility to rest against restrictions on the size of the model to be placed on a device. 
+Sometimes you might face such business cases when you need to use a Machine Learning model on a mobile device. However, there is a possibility to rest against restrictions on the size of the model to be placed on a device.  
 [Microsoft Custom Vision Service](https://www.customvision.ai) allows you to easily customize your own state-of-the-art computer vision models for your unique use case. And this repository will guide you through the ways of Custom Vision exported models compression. 
 
 ## Installation
