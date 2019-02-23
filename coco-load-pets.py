@@ -6,6 +6,7 @@ from os import makedirs
 
 
 data_dir = 'data'
+images_dir = join(data_dir, 'images')
 
 n_train = 100
 coco = COCO('annotations/instances_val2017.json')
@@ -26,6 +27,6 @@ imgs = coco.loadImgs(catImgIds[:n_train] + dogImgIds[:n_train])
 # Save images 
 for img in tqdm(train_imgs):
     I = io.imread(img['coco_url'])
-    io.imsave(fname=join(data_dir, img['coco_url'].split('/')[-1]), arr=I)
+    io.imsave(fname=join(images_dir, img['coco_url'].split('/')[-1]), arr=I)
    
 print("Done")
