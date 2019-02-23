@@ -48,22 +48,22 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|0.89474|0.15741|
+|dog|0.5|0.23894|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|1.0|0.083333|
+|dog|0.55556|0.26549|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|1.0|0.083333|
+|dog|0.59649|0.30088|
 
 </td></tr>
 
@@ -75,15 +75,15 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|1.0|0.083333|
+|dog|0.55556|0.26549|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|1.0|0.083333|
+|dog|0.59649|0.30088 |
 
 </td></tr>
 
@@ -95,8 +95,8 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat| | |
-|dog| | |
+|cat|0.31579|0.11111|
+|dog|0.52|0.23009|
 
 </td><td>
 
