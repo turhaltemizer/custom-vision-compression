@@ -2,7 +2,7 @@ import sys
 import coremltools
 import numpy as np
 from PIL import Image, ImageDraw
-from object_detection import ObjectDetection
+from models.coreml.python.object_detection import ObjectDetection
 
 MODEL_FILENAME = 'model.mlmodel'
 LABELS_FILENAME = 'labels.txt'

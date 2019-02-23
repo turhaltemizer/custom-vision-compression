@@ -2,7 +2,7 @@ import sys
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-from object_detection import ObjectDetection
+from models.tensorflow.python.object_detection import ObjectDetection
 
 MODEL_FILENAME = 'model.pb'
 LABELS_FILENAME = 'labels.txt'
