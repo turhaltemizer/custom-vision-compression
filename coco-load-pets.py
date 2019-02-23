@@ -14,8 +14,11 @@ coco = COCO('annotations/instances_val2017.json')
 # Create train and test folders
 if not exists(data_dir):
     makedirs(data_dir)
+    makedirs(images_dir)
 else:
     print("Data directory already exists") 
+    if not exists(images_dir):
+        makedirs(images_dir)
 
 # Get cats and dogs categories
 catImgIds = coco.getImgIds(catIds=coco.getCatIds(catNms=['cat']))
