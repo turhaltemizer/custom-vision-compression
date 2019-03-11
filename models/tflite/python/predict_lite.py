@@ -4,11 +4,7 @@ from tensorflow.contrib.lite.python.interpreter import Interpreter
 from tensorflow.contrib.lite.python import interpreter
 import numpy as np
 from PIL import Image
-<<<<<<< HEAD:models/tflite/python/predict_lite.py
 from models.tflite.python.object_detection import ObjectDetection
-=======
-from models.tensorflow.python.object_detection import ObjectDetection
->>>>>>> e34db452047b9f624816189fadb0d898d2ced0a5:models/tensorflow/python/predict_lite.py
 
 MODEL_FILENAME = 'quantized_model.tflite'
 LABELS_FILENAME = 'labels.txt'

@@ -1,4 +1,8 @@
 from metrics import * 
+from pipe import Pipe
+from PIL import Image
+from os.path import join
+import mPyPl as mp
 
 
 def cv_prediction_as_dict(prediction, width=None, height=None):
@@ -30,3 +34,16 @@ def print_report(stream, input_tags, prob_thresh, overlap_thresh, pred_field='pr
     for tag in input_tags:
         precision, recall = precision_recall(stream, tag, prob_thresh, overlap_thresh, pred_field=pred_field, gt_field=gt_field)
         print('{:15.12} | {:^12.5} | {:^12.5}'.format(tag, float(precision), float(recall)))
+     
+
+@Pipe
+def apply_quantized_model(stream, data_dir, model, dest_field):
+    return (
+        stream 
+        | mp.apply('filename', dest_field + '_raw', lambda x: model.predict_image(Image.open(join(data_dir, x))))
+        | mp.apply([dest_field + '_raw', 'width', 'height'], dest_field, lambda x: x[0]
+            | mp.select(lambda p: format_dict(p, x[1], x[2]))
+            | mp.as_list
+        )
+        | mp.delfield([dest_field + '_raw'])
+    ) 
