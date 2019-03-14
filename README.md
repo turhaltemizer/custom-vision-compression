@@ -8,7 +8,7 @@ Sometimes you might face such business cases when you need to use a Machine Lear
 ```bash
 $ git clone https://github.com/vJenny/custom-vision-compression.git
 ```
-2. Install all files in the *requirements.txt* file.
+2. Install all the libraries from the *requirements.txt* file.
 ```bash
 $ pip install -r requirements.txt
 ```
