@@ -31,8 +31,8 @@ The only thing you should carry about is your dataset mark-up process. To make t
 
 ## Results
 Taking everything into consideration, we can come up with the following conclusion: 
-* Compression of the mentioned model is **possible** with an insignificant loss of accuracy. 
-* In case of **CoreML** (iOS platform), we have the following options: **16FP format (22Mb)** and **8FP format (11Mb)**. The second one is better in terms of the expected size, however it slightly inferiors in quality. 
+* Compression of the mentioned model is **possible** with an insignificant loss of accuracy, however the loss of significant digits causes some fluctuation. 
+* In case of **CoreML** (iOS platform), we have the following options: **16FP format (22Mb)** and **8FP format (11Mb)**. The second one is better in terms of the expected size, however it inferiors in quality. 
 * As for the **TFLite model** (Android platform), the only possible option is to quantize the model to **8FP format (11Mb)**. 
 * **Custom Vision API** works a bit better than all the exported models. 
    
@@ -91,10 +91,12 @@ Taking everything into consideration, we can come up with the following conclusi
 | Tag | Precision | Recall|
 |--|--|--|
 |cat|0.31683|0.1561|
-|dog|0.65455|0.65455|
+|dog|0.65455|0.18367|
 
 </td><td>
 
 
 </td></tr>
 </table>
+
+❗️ The model was trained on a small dataset, so it's not well trained. The main objective of this project is not to train a perfect model, but to compare compressed models and create a reproducible example on an open dataset.
