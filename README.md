@@ -99,4 +99,4 @@ Taking everything into account, we can come up with the following conclusion:
 </td></tr>
 </table>
 
-❗️ The model was trained on a small dataset, so the that high. The main objective of this project is not to train a perfect model, but to compare compressed models and create a reproducible example on an open dataset.
+❗️ The model was trained on a small dataset, so the quality is not that high. The main objective of this project is not to train a perfect model, but to compare compressed models and create a reproducible example on an open dataset.
