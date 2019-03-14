@@ -14,25 +14,20 @@ $ pip install -r requirements.txt
 ```
 
 ## Testing
-We use a subset of [COCO](http://cocodataset.org/#home) dataset for our experiments. You don't need to download the whole dataset to reproduce our experiments. 
+We use a subset of [COCO](http://cocodataset.org/#home) dataset for our experiments. You don't need to download the whole dataset to reproduce our experiments. The data will be automatically loaded during the notebook execution, however it requires some preparation work. 
 ```bash
 # Download and unpack the annotation file
 $ wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
 $ unzip annotations_trainval2017.zip
 $ rm -rf annotations_trainval2017.zip
-# Run the data downloading script
-$ python coco-load-pets.py
 ```
 
 Open [model-compression](https://github.com/vJenny/custom-vision-compression/blob/master/model-compression.ipynb) notebook and go through its cells.  
 You need to create your own [Custom Vision](https://www.customvision.ai) Model in case you want to test the API and provide the notebook with your credentials. You can find all the exported models in the [models](https://github.com/vJenny/custom-vision-compression/tree/master/models) folder.  
 
 ## Usage 
-To reproduce this experiment on your own dataset, you need to do the following steps:
-1. Mark up your dataset. To make this step easier, we've used [VoTT](https://github.com/Microsoft/VoTT) tool. 
-2. Create your own [Custom Vision](https://www.customvision.ai) account and [export compact models](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model).
-3. Move your dataset to the **data** folder (don't forget about the **.json** file containing VoTT meta information). 
-4. Put all the exported models into **models/coreml** and **models/tflite** folders respectively.
+To reproduce this experiment on your own dataset, you need to create your own [Custom Vision](https://www.customvision.ai) account and [export compact models](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model). Then put all the exported models into **models/coreml** and **models/tflite** folders respectively.  
+The only thing you should carry about is your dataset mark-up process. To make this step easier, we usually use the [VoTT](https://github.com/Microsoft/VoTT) tool. 
 
 ## Results
 Taking everything into consideration, we can come up with the following conclusion: 
@@ -48,22 +43,22 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|0.89474|0.15741|
-|dog|0.5|0.23894|
+|cat|0.96667|0.14146 |
+|dog|0.70833|0.2602|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|1.0|0.083333|
-|dog|0.55556|0.26549|
+|cat|1.0|0.087805|
+|dog|0.7377|0.22959|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|1.0|0.083333|
-|dog|0.59649|0.30088|
+|cat|1.0|0.087805|
+|dog|0.76271|0.22959|
 
 </td></tr>
 
@@ -75,15 +70,15 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|1.0|0.083333|
-|dog|0.55556|0.26549|
+|cat|1.0|0.087805|
+|dog|0.7377|0.22959|
 
 </td><td>
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|1.0|0.083333|
-|dog|0.59649|0.30088 |
+|cat|1.0|0.087805|
+|dog|0.74242|0.25|
 
 </td></tr>
 
@@ -95,8 +90,8 @@ Taking everything into consideration, we can come up with the following conclusi
 
 | Tag | Precision | Recall|
 |--|--|--|
-|cat|0.31579|0.11111|
-|dog|0.52|0.23009|
+|cat|0.31683|0.1561|
+|dog|0.65455|0.65455|
 
 </td><td>
 
