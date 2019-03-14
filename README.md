@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Testing
-We use a subset of [COCO](http://cocodataset.org/#home) dataset for our experiments. You don't need to download the whole dataset to reproduce our experiments. The data will be automatically loaded during the notebook execution, however it requires some preparation work. 
+We use a subset of [COCO](http://cocodataset.org/#home) dataset for our experiments. You don't need to download the whole dataset to reproduce our steps. The data will be automatically loaded during the notebook execution, however it requires some preparation work. 
 ```bash
 # Download and unpack the annotation file
 $ wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
@@ -27,11 +27,11 @@ You need to create your own [Custom Vision](https://www.customvision.ai) Model i
 
 ## Usage 
 To reproduce this experiment on your own dataset, you need to create your own [Custom Vision](https://www.customvision.ai) account and [export compact models](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model). Then put all the exported models into **models/coreml** and **models/tflite** folders respectively.  
-The only thing you should carry about is your dataset mark-up process. To make this step easier, we usually use the [VoTT](https://github.com/Microsoft/VoTT) tool. 
+The only thing you should care of is your dataset mark-up process. To make this step easier, we usually use the [VoTT](https://github.com/Microsoft/VoTT) tool. 
 
 ## Results
-Taking everything into consideration, we can come up with the following conclusion: 
-* Compression of the mentioned model is **possible** with an insignificant loss of accuracy, however the loss of significant digits causes some fluctuation. 
+Taking everything into account, we can come up with the following conclusion: 
+* Compression of the mentioned model is **possible** with an inessential loss of accuracy, however the loss of significant digits causes some fluctuation. 
 * In case of **CoreML** (iOS platform), we have the following options: **16FP format (22Mb)** and **8FP format (11Mb)**. The second one is better in terms of the expected size, however it inferiors in quality. 
 * As for the **TFLite model** (Android platform), the only possible option is to quantize the model to **8FP format (11Mb)**. 
 * **Custom Vision API** works a bit better than all the exported models. 
@@ -99,4 +99,4 @@ Taking everything into consideration, we can come up with the following conclusi
 </td></tr>
 </table>
 
-❗️ The model was trained on a small dataset, so it's not well trained. The main objective of this project is not to train a perfect model, but to compare compressed models and create a reproducible example on an open dataset.
+❗️ The model was trained on a small dataset, so the that high. The main objective of this project is not to train a perfect model, but to compare compressed models and create a reproducible example on an open dataset.
